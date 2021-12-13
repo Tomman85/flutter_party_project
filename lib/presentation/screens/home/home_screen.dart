@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_party/presentation/screens/details/details_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -57,19 +58,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   margin: isPortrait
                       ? EdgeInsets.all(0)
                       : EdgeInsets.symmetric(horizontal: 100),
-                  padding: isPortrait
-                      ? const EdgeInsets.symmetric(horizontal: 35)
-                      : const EdgeInsets.symmetric(horizontal: 60),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   height: isPortrait ? size.height * 0.08 : size.height * 0.2,
                   decoration: const ShapeDecoration(
                       shape: StadiumBorder(), color: Colors.orange),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: const [
                       Text(
                         "Find nearest event",
                         style: TextStyle(color: Colors.white, fontSize: 17),
                       ),
-                      Spacer(),
                       Icon(
                         Icons.arrow_forward,
                         color: Colors.white,
@@ -78,7 +77,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 onTap: () {
-                  print('elo');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailScreen(),
+                    ),
+                  );
                 },
               ),
               const SizedBox(

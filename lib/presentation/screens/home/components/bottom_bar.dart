@@ -13,7 +13,7 @@ class BottomBar extends StatelessWidget {
       child: Container(
         height: 50.0,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(25.0),
             topRight: Radius.circular(25.0),
           ),
@@ -28,7 +28,7 @@ class BottomBar extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.home,
                     color: Color(0xffef7532),
                   ),
